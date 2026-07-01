@@ -1,43 +1,62 @@
-# 🎥 Video/Audio to Text Assistant
+# 🎙️ AI Meeting Assistant
 
-A Generative AI application that converts video and audio files into accurate text transcripts using automatic speech recognition (ASR) technology.
+An end-to-end Generative AI application that transforms meeting recordings into actionable insights using Speech Recognition, LLMs, and Retrieval-Augmented Generation (RAG).
 
-The application allows users to upload video or audio files and generates text transcripts that can be used for note-taking, content creation, summarization, and information retrieval.
+The application accepts YouTube links, audio files, or video files and automatically generates transcripts, summaries, action items, key decisions, and allows users to chat with their meetings using AI.
 
 ## 🚀 Features
 
-- Upload video files and extract spoken content as text
-- Upload audio files and generate transcripts
-- Supports multiple audio and video formats
-- Fast transcription using AI-powered speech recognition
-- User-friendly Streamlit interface
-- Download or copy generated transcripts
-- Simple and interactive UI
+- Accepts YouTube URLs, audio files, and video files as input
+- Transcribes English meetings using OpenAI Whisper running locally
+- Transcribes Hindi and Hinglish meetings using Sarvam AI
+- Generates concise meeting summaries in bullet points
+- Extracts action items along with owners and deadlines
+- Identifies key decisions made during meetings
+- Extracts open questions and pending follow-ups
+- Enables conversational querying over meeting content using RAG
+- Exports generated reports as PDF or TXT files
 
-## 🛠️ Tech Stack
+## 🛠 Tech Stack
 
 - Python
+- OpenAI Whisper
+- Sarvam AI
+- LangChain LCEL
+- Mistral AI
+- ChromaDB
+- HuggingFace Embeddings
 - Streamlit
-- Whisper
-- yt-dlp
 - FFmpeg
-- LangChain
-- Generative AI APIs
-- UV Package Manager
+- yt-dlp
+
+## 🧠 Architecture
+
+Input Media/YouTube URL
+↓
+Speech-to-Text Pipeline
+↓
+Meeting Analysis using LLM
+↓
+Chunking + Embeddings
+↓
+ChromaDB Vector Store
+↓
+RAG-based Chat Interface
+↓
+PDF/TXT Report Export
 
 ## 🎯 Use Cases
 
-- Lecture transcription
-- Meeting notes generation
-- Podcast transcription
-- Video content analysis
-- Content repurposing
-- Research and documentation
+- Corporate meeting analysis
+- Interview transcript generation
+- Lecture and webinar summarization
+- Team collaboration and follow-ups
+- Podcast and content analysis
 
-## 📈 Future Improvements
+## 📈 Future Enhancements
 
-- Multi-language transcription
-- Speaker identification
-- Transcript summarization
-- Question Answering over transcripts using RAG
-- Translation support
+- Multi-speaker diarization
+- Multi-language support
+- Calendar integration
+- Automatic email summary generation
+- Meeting analytics dashboard
