@@ -1,4 +1,4 @@
-# 🎙️ MultiMedia AI Assistant
+# 🎙️ MediaMind AI Assistant
 
 An end-to-end Generative AI application that transforms meeting recordings into actionable insights using Speech Recognition, LLMs, and Retrieval-Augmented Generation (RAG).
 
